@@ -16,7 +16,7 @@ module.exports = (uri) => {
   ) {
     return {
       documentUrl: uri,
-      document: require("./contexts/lds-jws-v1.json"),
+      document: require("./contexts/lds-jws2020-v1.json"),
     };
   }
 

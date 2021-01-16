@@ -1,0 +1,40 @@
+{
+  "http://example.gov/credentials/3732": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1"
+    ],
+    "id": "http://example.gov/credentials/3732",
+    "type": [
+      "VerifiableCredential",
+      "UniversityDegreeCredential"
+    ],
+    "issuer": {
+      "id": "did:example:123"
+    },
+    "issuanceDate": "2020-03-10T04:24:12.164Z",
+    "credentialSubject": {
+      "id": "did:example:456"
+    },
+    "proof": {
+      "type": "Ed25519Signature2018",
+      "created": "2021-01-16T20:37:54.860Z",
+      "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..6d9m6RZos7v1B4YiwuDIXtOa6CFQDONxNNedItS66yF9abcUhHtoqrqRjH7pj9VwG4KraVw43NFJqpk4WY7IBg",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "did:example:123#credential-issuance-key"
+    }
+  },
+  "did:example:123": {
+    "@context": [
+      "https://www.w3.org/ns/did/v1"
+    ],
+    "id": "did:example:123",
+    "assertionMethod": [
+      {
+        "id": "#credential-issuance-key",
+        "type": "Ed25519VerificationKey2018",
+        "controller": "did:example:123",
+        "publicKeyBase58": "g9X6bPg6ZKWvc24zgqMhrXerMXoY878KqPxfBiEVLsJ"
+      }
+    ]
+  }
+}

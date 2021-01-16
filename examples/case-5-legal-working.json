@@ -1,0 +1,51 @@
+{
+  "http://example.gov/credentials/3732": {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://w3c-ccg.github.io/lds-jws2020/contexts/lds-jws2020-v1.json"
+    ],
+    "id": "http://example.gov/credentials/3732",
+    "type": [
+      "VerifiableCredential",
+      "UniversityDegreeCredential"
+    ],
+    "issuer": {
+      "id": "did:example:123"
+    },
+    "issuanceDate": "2020-03-10T04:24:12.164Z",
+    "credentialSubject": {
+      "id": "did:example:456"
+    },
+    "proof": {
+      "type": "JsonWebSignature2020",
+      "created": "2021-01-16T20:37:55.001Z",
+      "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..xyH5y3QTkPcaL0CsT6Ltzilw2NrY3B8esL-MIW-QXHFhkD6eADcJ7_fB5nHo4BNKy0OMZ5TxTw8-8FrqFJTGBw",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "did:example:123#credential-issuance-key"
+    }
+  },
+  "did:example:123": {
+    "@context": [
+      "https://www.w3.org/ns/did/v1"
+    ],
+    "id": "did:example:123",
+    "publicKey": [
+      {
+        "id": "#credential-issuance-key",
+        "type": "JsonWebKey2020",
+        "controller": "did:example:123",
+        "publicKeyJwk": {
+          "kty": "OKP",
+          "crv": "Ed25519",
+          "x": "fnwl8GAH_K2uHFjQLxQmKq826Mg-DznY4Wmex-LFhYA"
+        }
+      }
+    ],
+    "assertionMethod": [
+      "#credential-issuance-key"
+    ],
+    "authentication": [
+      "#credential-issuance-key"
+    ]
+  }
+}
